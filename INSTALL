@@ -1,0 +1,32 @@
+
+REQUISITE SOFTWARE
+
+To use micc, the following software must already be installed:
+
+Linux
+GCC
+gputils (GNU PIC Utilities)
+
+INSTALLATION
+
+To install micc:
+
+   make
+   make install         # This must be done as root.
+
+To uninstall micc:
+
+   make uninstall       # This must be done as root.
+
+To compile one or more source files into a binary file:
+
+   micc -o program.hex file1.c file2.c ...
+
+This can also be done in two stages, generating assembly language (.s)
+from each C source file and then linking them together:
+
+   micc -c file1.c file2.c ...
+   micc -o program.hex file1.s file2.s ...
+
+There must be exactly one main() function per final binary file.
+

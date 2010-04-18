@@ -1,0 +1,35 @@
+
+CURRENTLY SUPPORTED C CONSTRUCTIONS - LIMITED PARTIAL SUBSET
+* Nested and parenthesized expressions
+* Global int variables including constant expression initialization
+* Functions (must have int return type; no function arguments supported)
+* Selection statements: if else
+* Iteration statements: while
+* Equality operators: ==
+* Logical operators: && || !
+* Assignment operators: = += -=
+* Additive operators: + -
+* Bitwise operators: & ^ |
+* Shift operators: << >>
+* Prefix incrementation operators: ++ --
+* Unary minus operator: -
+* Comma operator
+* Inline assembly language using __asm__ keyword (GCC syntax)
+* Comments: /* */
+* File inclusion: #include
+* Macro substitution: #define, etc.
+* Conditional inclusion: #ifdef, etc.
+
+COMPILER OPTIONS
+* Linkage of multiple C and/or assembly language source files
+* GCC-like command line options (currently: -E, -c, -o, and -save-temps)
+
+PIC-SPECIFIC PROPERTIES
+* "Automatic" memory bank switching at the C level
+* Access to registers PORTB and TRISB via get/set macros
+* Serial comm send on RA0 via putchar(int) macro defined in stdio.h
+* 20 MHz delay functions: delay100us() delay1ms() delay10ms()
+
+CURRENTLY TARGETED PIC PROCESSORS
+* 16F877A
+
